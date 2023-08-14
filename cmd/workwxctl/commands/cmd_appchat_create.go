@@ -24,7 +24,6 @@ func cmdAppchatCreate(c *cli.Context) error {
 		MemberUserIDs: userIDs,
 	}
 	fmt.Printf("about to create appchat %+v\n", req)
-
 	newChatID, err := app.CreateAppchat(&req)
 	if err != nil {
 		fmt.Printf("failed to create appchat: error = %+v\n", err)

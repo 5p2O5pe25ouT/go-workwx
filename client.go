@@ -195,6 +195,6 @@ func (c *WorkwxApp) executeQyapiMediaUpload(
 	return nil
 }
 
-func (c *WorkwxApp) GetAccessToken() string {
-	return c.accessToken.token
+func (c *WorkwxApp) GetAccessToken() (string, error) {
+	return c.accessToken.getToken()
 }
